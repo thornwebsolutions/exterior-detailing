@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProWash Elite - Premium Exterior Detailing & Pressure Washing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0066ff, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0066ff;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #0066ff, #0052cc);
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 102, 255, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .primary-button {
+            background: linear-gradient(135deg, #00ccff, #0066ff);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 30px rgba(0, 204, 255, 0.4);
+            display: inline-block;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 204, 255, 0.5);
+        }
+
+        .secondary-button {
+            background: transparent;
+            color: white;
+            padding: 1.2rem 3rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .secondary-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: white;
+            padding: 4rem 5%;
+            box-shadow: 0 -5px 30px rgba(0,0,0,0.05);
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0066ff, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: #666;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 6rem 5%;
+            background: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .benefits-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 35px rgba(0,0,0,0.12);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #0066ff, #00ccff);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 5%;
+            background: white;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #0066ff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 102, 255, 0.15);
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-icon {
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0066ff, #00ccff);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .service-header h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .service-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #333;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: #00ccff;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #0a1628, #1a2940);
+            color: white;
+        }
+
+        .process-steps {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00ccff, #0066ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 8px 25px rgba(0, 204, 255, 0.4);
+        }
+
+        .process-step h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .process-step p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 5%;
+            background: #f8f9fa;
+        }
+
+        .testimonials-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-rating {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #0066ff;
+        }
+
+        .testimonial-location {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #0066ff, #00ccff);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-button-large {
+            background: white;
+            color: #0066ff;
+            padding: 1.5rem 4rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .cta-button-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a1628;
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #00ccff;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #00ccff;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .primary-button,
+            .secondary-button {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">ProWash Elite</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Get Free Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Premium Power, Flawless Results</h1>
+                <p>Transform your property with professional-grade exterior detailing. We deliver exceptional curb appeal using advanced soft-wash technology and eco-friendly solutions that protect your surfaces and the environment.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="primary-button">Schedule Service</a>
+                    <a href="#services" class="secondary-button">View Services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/header image.jpeg" alt="Professional exterior detailing" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>2,500+</h3>
+                <p>Properties Cleaned</p>
+            </div>
+            <div class="stat-item">
+                <h3>98%</h3>
+                <p>Customer Satisfaction</p>
+            </div>
+            <div class="stat-item">
+                <h3>10+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Eco-Friendly</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="section-header">
+            <h2>Why Property Owners Choose Us</h2>
+            <p>We combine cutting-edge technology with environmentally responsible practices to deliver results that protect your investment and enhance your property's value.</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">🌱</div>
+                <h3>Safe, Green Cleaning</h3>
+                <p>Biodegradable and pet-friendly solutions that protect your family and the environment.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🛡️</div>
+                <h3>Soft-Wash That Protects</h3>
+                <p>Gentle techniques that clean effectively without causing surface damage.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📅</div>
+                <h3>Seasonal Service Plans</h3>
+                <p>Scheduled treatments that fit your lifestyle with convenient maintenance options.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💎</div>
+                <h3>Luxury Curb Appeal</h3>
+                <p>High-end results that boost your property value and impress visitors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive exterior cleaning solutions tailored to your property's unique needs.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon">🏠</span>
+                        <h3>House Washing</h3>
+                    </div>
+                    <p>Gentle soft-wash treatment that safely removes dirt, mold, and mildew from siding, stucco, and brick.</p>
+                    <ul class="service-features">
+                        <li>All siding types</li>
+                        <li>Stucco restoration</li>
+                        <li>Window cleaning included</li>
+                        <li>Gutter brightening</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon">🚗</span>
+                        <h3>Driveway & Walkways</h3>
+                    </div>
+                    <p>High-pressure cleaning that lifts oil stains, tire marks, and embedded dirt from concrete and pavers.</p>
+                    <ul class="service-features">
+                        <li>Concrete restoration</li>
+                        <li>Paver sealing</li>
+                        <li>Stain removal</li>
+                        <li>Joint sand replacement</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon">🏊</span>
+                        <h3>Pool Decks & Patios</h3>
+                    </div>
+                    <p>Specialized cleaning for pool areas that removes algae, calcium deposits, and creates slip-resistant surfaces.</p>
+                    <ul class="service-features">
+                        <li>Algae removal</li>
+                        <li>Calcium treatment</li>
+                        <li>Outdoor furniture</li>
+                        <li>Safety-focused</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon">📐</span>
+                        <h3>Roof Cleaning</h3>
+                    </div>
+                    <p>Safe, low-pressure roof washing that extends your roof's life by removing algae, moss, and organic buildup.</p>
+                    <ul class="service-features">
+                        <li>Shingle protection</li>
+                        <li>Tile cleaning</li>
+                        <li>Metal roof care</li>
+                        <li>Warranty-safe methods</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon">🪟</span>
+                        <h3>Fence & Deck Restoration</h3>
+                    </div>
+                    <p>Revitalize wood and vinyl fencing with deep cleaning that prepares surfaces for staining or sealing.</p>
+                    <ul class="service-features">
+                        <li>Wood restoration</li>
+                        <li>Vinyl brightening</li>
+                        <li>Pre-stain prep</li>
+                        <li>Rot prevention</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon">🏢</span>
+                        <h3>Commercial Properties</h3>
+                    </div>
+                    <p>Large-scale exterior cleaning for retail, office, and multi-family properties with minimal disruption.</p>
+                    <ul class="service-features">
+                        <li>Storefront washing</li>
+                        <li>Parking lot cleaning</li>
+                        <li>Building facades</li>
+                        <li>Scheduled maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="section-header">
+            <h2>Our Simple Process</h2>
+            <p>From quote to completion, we make professional exterior cleaning effortless.</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Free Consultation</h3>
+                <p>Contact us for a no-obligation quote. We'll assess your property and recommend the best services.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Schedule Service</h3>
+                <p>Choose a convenient time that works for you. We offer flexible scheduling to fit your needs.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Professional Cleaning</h3>
+                <p>Our certified team arrives on time with commercial equipment and completes the work efficiently.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Quality Guarantee</h3>
+                <p>We inspect every job to ensure perfection. Not satisfied? We'll make it right, guaranteed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <h2>What Our Clients Say</h2>
+            <p>Don't just take our word for it—hear from property owners who've experienced the ProWash Elite difference.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">"The peace of mind Golden Grove gives us is unmatched."</p>
+                <p class="testimonial-author">M. Thompson</p>
+                <p class="testimonial-location">Park Shore</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">"Alex is a master of his craft."</p>
+                <p class="testimonial-author">C. Wallace</p>
+                <p class="testimonial-location">Pelican Bay</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">"John Sardina is the kind of person you want on your property."</p>
+                <p class="testimonial-author">L. Daniels</p>
+                <p class="testimonial-location">Moorings</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Property?</h2>
+            <p>Get a free, no-obligation quote today and discover why thousands of property owners trust ProWash Elite for their exterior detailing needs.</p>
+            <a href="tel:555-123-4567" class="cta-button-large">Call (555) 123-4567</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ProWash Elite</h4>
+                <p>Premium exterior detailing and pressure washing services for residential and commercial properties.</p>
+                <p>Licensed • Insured • Certified</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="#services">House Washing</a>
+                <a href="#services">Driveway Cleaning</a>
+                <a href="#services">Roof Cleaning</a>
+                <a href="#services">Commercial Services</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="#benefits">Why Choose Us</a>
+                <a href="#process">Our Process</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Get Quote</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@prowashelite.com</p>
+                <p>Hours: Mon-Sat 7AM-7PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ProWash Elite. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+</body>
+</html>
