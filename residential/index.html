@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Services - Exterior Detailing Naples</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1a1a1a; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Navigation */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 1.2rem 5%; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
+        .logo-main { font-size: 1.5rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: #1a1a1a; position: relative; padding-bottom: 4px; }
+        .logo-main::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #00CED1, #5DD3E8); }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
+        .nav-links a:hover { color: #00CED1; }
+        .cta-button { background: #00CED1; color: white; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 2px 8px rgba(0, 206, 209, 0.15); white-space: nowrap; }
+        .cta-button:hover { transform: translateY(-2px); background: #00B5B8; box-shadow: 0 4px 12px rgba(0, 206, 209, 0.2); }
+
+        /* Hero Section */
+        .hero { margin-top: 80px; min-height: 70vh; background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%); color: white; display: flex; align-items: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'); opacity: 0.5; }
+        .hero-content { max-width: 1400px; margin: 0 auto; padding: 4rem 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; width: 100%; box-sizing: border-box; }
+        .hero-text h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; color: #ffffff; }
+        .hero-text p { font-size: 1.3rem; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9); line-height: 1.8; }
+        .hero-image { position: relative; }
+        .hero-image::before { content: ''; position: absolute; top: -20px; left: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
+        .hero-image::after { content: ''; position: absolute; bottom: -20px; right: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
+        .hero-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 1; }
+        .primary-button { background: #00CED1; color: white; padding: 1.2rem 3rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: transform 0.3s, background 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2); display: inline-block; white-space: nowrap; }
+        .primary-button:hover { transform: translateY(-3px); background: #00B5B8; box-shadow: 0 6px 20px rgba(0, 206, 209, 0.25); }
+
+        /* Benefits Section */
+        .benefits { padding: 5rem 5%; background: white; }
+        .section-header { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; color: #1a1a1a; }
+        .section-header p { font-size: 1.1rem; color: #666; line-height: 1.8; }
+        .benefits-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .benefit-card { background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+        .benefit-card:hover { transform: translateY(-5px); box-shadow: 0 8px 35px rgba(0,0,0,0.12); }
+        .benefit-icon { font-size: 2.5rem; margin-bottom: 1rem; color: #00CED1; }
+        .benefit-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; color: #1a1a1a; }
+        .benefit-card p { color: #666; font-size: 0.95rem; }
+
+        /* Services Section */
+        .services { padding: 5rem 5%; background: #f8f9fa; }
+        .services-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .service-card { background: white; border-radius: 12px; padding: 1.5rem; border: 2px solid #e9ecef; transition: all 0.3s; }
+        .service-card:hover { border-color: #00CED1; transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0, 206, 209, 0.1); }
+        .service-card h3 { font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .service-card h3 i { color: #00CED1; }
+        .service-card p { color: #666; font-size: 0.9rem; }
+
+        /* Gallery Section */
+        .gallery { padding: 5rem 5%; background: white; }
+        .gallery-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .gallery-item { border-radius: 16px; overflow: hidden; height: 300px; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        /* Maintenance Plans */
+        .plans { padding: 5rem 5%; background: linear-gradient(135deg, #0a1628, #1a2940); color: white; }
+        .plans .section-header h2 { color: white; }
+        .plans .section-header p { color: rgba(255,255,255,0.8); }
+        .plans-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .plan-card { background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2.5rem; text-align: center; transition: all 0.3s; }
+        .plan-card:hover { border-color: #00CED1; background: rgba(255,255,255,0.08); }
+        .plan-card.featured { border-color: #00CED1; background: rgba(0,206,209,0.1); }
+        .plan-card h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .plan-card .frequency { color: #00CED1; font-weight: 600; margin-bottom: 1.5rem; }
+        .plan-card p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+
+        /* Golden Grove Connection */
+        .connection { padding: 4rem 5%; background: #f8f9fa; }
+        .connection-content { max-width: 900px; margin: 0 auto; text-align: center; }
+        .connection-content h2 { font-size: 2rem; margin-bottom: 1rem; color: #1a1a1a; }
+        .connection-content p { font-size: 1.1rem; color: #666; line-height: 1.8; }
+
+        /* CTA Section */
+        .cta-section { padding: 5rem 5%; background: white; text-align: center; }
+        .cta-content { max-width: 800px; margin: 0 auto; }
+        .cta-content h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; color: #1a1a1a; }
+        .cta-button-large { background: #00CED1; color: white; padding: 1.5rem 4rem; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.2rem; display: inline-block; transition: transform 0.3s, box-shadow 0.3s, background 0.3s; box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2); }
+        .cta-button-large:hover { transform: translateY(-3px); background: #00B5B8; box-shadow: 0 6px 20px rgba(0, 206, 209, 0.25); }
+
+        /* Footer */
+        footer { background: #0a1628; color: white; padding: 4rem 5% 2rem; }
+        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
+        .footer-section h4 { font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem; color: #ffffff; }
+        .footer-section p, .footer-section a { color: rgba(255, 255, 255, 0.8); text-decoration: none; display: block; margin-bottom: 0.8rem; transition: color 0.3s; }
+        .footer-section a:hover { color: #5DD3E8; }
+        .footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; color: rgba(255, 255, 255, 0.6); }
+        .footer-tagline { margin-top: 0.5rem; font-style: italic; color: rgba(255, 255, 255, 0.5); }
+
+        /* Hamburger Menu */
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; padding: 10px; }
+        .hamburger span { width: 25px; height: 3px; background: #1a1a1a; border-radius: 2px; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+        .mobile-menu { display: none; position: fixed; top: 80px; left: 0; right: 0; background: white; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 999; }
+        .mobile-menu.active { display: block; }
+        .mobile-menu a { display: block; padding: 1rem 0; color: #1a1a1a; text-decoration: none; font-weight: 600; border-bottom: 1px solid #eee; }
+        .mobile-menu a:hover { color: #00CED1; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links, .cta-button { display: none; }
+            .logo-main { font-size: 1.1rem; letter-spacing: 1px; }
+            .hero-content { grid-template-columns: 1fr; text-align: center; padding: 3rem 1.5rem; }
+            .hero-text { display: flex; flex-direction: column; align-items: center; }
+            .hero-image { display: flex; justify-content: center; }
+            .hero-text h1 { font-size: 2.2rem; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .plans-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .section-header h2 { font-size: 2rem; }
+            .hero-image::before { left: -18px; }
+            .hero-image::after { bottom: -5px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <span class="logo-main">Exterior Detailing</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/commercial/">Commercial</a></li>
+                <li><a href="/residential/">Residential</a></li>
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+            <a href="/contact/" class="cta-button">Get Free Quote</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Home</a>
+        <a href="/commercial/">Commercial</a>
+        <a href="/residential/">Residential</a>
+        <a href="/about/">About Us</a>
+        <a href="/contact/">Contact</a>
+        <a href="/contact/" style="color: #00CED1; border: none; margin-top: 1rem;">Get Free Quote</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Home & Estate<br>Exterior Cleaning</h1>
+                <p>Low-pressure, eco-friendly soft washing for Naples' finest homes.</p>
+                <a href="/contact/" class="primary-button">Request a Free Home Estimate</a>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/IMG_9944.jpeg" alt="Luxury home exterior cleaning" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="benefits">
+        <div class="section-header">
+            <h2>Why Choose Us</h2>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-feather"></i></div>
+                <h3>Low Pressure = Zero Damage</h3>
+                <p>Safe for all surfaces including paint, windows, and landscaping.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Eco-Friendly & Plant Safe</h3>
+                <p>Biodegradable solutions safe for your lawn and waterways.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-people-roof"></i></div>
+                <h3>Sardina Family Owned</h3>
+                <p>Personal service and attention to detail on every job.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="section-header">
+            <h2>Residential Services</h2>
+            <p>Complete exterior care for your home</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3><i class="fas fa-home"></i> Roof Soft Wash</h3>
+                <p>Safe removal of algae, moss, and stains without damaging shingles.</p>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-house-chimney"></i> Home Soft Wash</h3>
+                <p>Gentle cleaning for siding, stucco, and brick exteriors.</p>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-road"></i> Pavers & Driveways</h3>
+                <p>Restore your pavers and concrete to like-new condition.</p>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-water"></i> Pool Decks & Lanais</h3>
+                <p>Slip-resistant cleaning for pool areas and outdoor living spaces.</p>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-border-all"></i> Screen Enclosures</h3>
+                <p>Brighten your screens and frames without damage.</p>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-eraser"></i> Rust & Stain Removal</h3>
+                <p>Specialized treatment for tough stains on any surface.</p>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-grip-lines"></i> Gutters & Soffits</h3>
+                <p>Remove black streaks and buildup from gutters and trim.</p>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-brush"></i> Paver Sanding & Sealing</h3>
+                <p>Complete paver restoration with joint sand and sealant.</p>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-couch"></i> Patio Furniture Cleaning</h3>
+                <p>Add-on service to refresh your outdoor furniture.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <div class="section-header">
+            <h2>Our Work</h2>
+            <p>See the difference professional exterior cleaning makes</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="../assets/IMG_8415.jpeg" alt="Clean luxury home exterior">
+            </div>
+            <div class="gallery-item">
+                <img src="../assets/IMG_9940.jpeg" alt="Clean balcony and lanai">
+            </div>
+            <div class="gallery-item">
+                <img src="../assets/IMG_9935.jpeg" alt="Clean pool deck area">
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Plans -->
+    <section class="plans">
+        <div class="section-header">
+            <h2>Annual Maintenance Plans</h2>
+            <p>Keep your home looking pristine year-round</p>
+        </div>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <h3>Essential</h3>
+                <p class="frequency">Quarterly</p>
+                <p>Perfect for homes needing seasonal maintenance and upkeep.</p>
+            </div>
+            <div class="plan-card featured">
+                <h3>Premium</h3>
+                <p class="frequency">Bi-Monthly</p>
+                <p>Ideal for properties requiring more frequent attention.</p>
+            </div>
+            <div class="plan-card">
+                <h3>Golden</h3>
+                <p class="frequency">Monthly</p>
+                <p>The ultimate care package for luxury estates and demanding properties.</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem; color: rgba(255,255,255,0.7);">All plans include priority scheduling and same-day communication.</p>
+    </section>
+
+    <!-- Golden Grove Connection -->
+    <section class="connection">
+        <div class="connection-content">
+            <h2>The Golden Grove Connection</h2>
+            <p>Exterior Detailing is the exterior-care division of Golden Grove Estate Management — both Sardina family owned & operated. This means you get estate-level care, communication, and professionalism on every job.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Your Home Will Never Look Better</h2>
+            <a href="/contact/" class="cta-button-large">Request a Free Home Estimate</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="/" style="text-decoration: none;"><h4>Exterior Detailing</h4></a>
+                <p>Premium exterior detailing and pressure washing services for residential and commercial properties.</p>
+                <p>Licensed & Insured</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="#services">Roof Washing</a>
+                <a href="#services">Paver Cleaning</a>
+                <a href="#services">Home Soft Wash</a>
+                <a href="#services">Pool Decks</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="/about/">About Us</a>
+                <a href="/commercial/">Commercial</a>
+                <a href="/residential/">Residential</a>
+                <a href="/contact/">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: alex@exteriordetailing.com</p>
+                <p>Hours: Mon-Sat 7AM-7PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Exterior Detailing. All rights reserved.</p>
+            <p class="footer-tagline">Sardina family owned & operated</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
