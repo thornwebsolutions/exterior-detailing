@@ -35,7 +35,7 @@
         .hero-image { position: relative; }
         .hero-image::before { content: ''; position: absolute; top: -20px; left: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
         .hero-image::after { content: ''; position: absolute; bottom: -20px; right: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
-        .hero-img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 1; }
+        .hero-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 1; opacity: 0; transition: opacity 0.3s ease-in; }
         .primary-button { background: #00CED1; color: white; padding: 1.2rem 3rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: transform 0.3s, background 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2); display: inline-block; white-space: nowrap; }
         .primary-button:hover { transform: translateY(-3px); background: #00B5B8; box-shadow: 0 6px 20px rgba(0, 206, 209, 0.25); }
 
@@ -170,7 +170,7 @@
                 <a href="/contact/" class="primary-button">Request a Free Home Estimate</a>
             </div>
             <div class="hero-image">
-                <img src="../assets/IMG_9944.jpeg" alt="Luxury home exterior cleaning" class="hero-img" width="800" height="500" loading="eager">
+                <img src="../assets/IMG_9944.jpeg" alt="Luxury home exterior cleaning" class="hero-img" width="592" height="450" loading="eager" onload="this.style.opacity=1">
             </div>
         </div>
     </section>

@@ -35,7 +35,7 @@
         .hero-image { position: relative; }
         .hero-image::before { content: ''; position: absolute; top: -20px; left: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
         .hero-image::after { content: ''; position: absolute; bottom: -20px; right: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
-        .hero-img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 1; }
+        .hero-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 1; opacity: 0; transition: opacity 0.3s ease-in; }
 
         /* Story Section */
         .story { padding: 5rem 5%; background: white; }
@@ -168,7 +168,7 @@
                 <p>Exterior Detailing is a Sardina family owned-operated company providing Naples with the highest standard of low-pressure, eco-friendly exterior cleaning.</p>
             </div>
             <div class="hero-image">
-                <img src="../assets/IMG_8083.jpeg" alt="Exterior Detailing team at work" class="hero-img" width="800" height="500" loading="eager">
+                <img src="../assets/IMG_8083.jpeg" alt="Exterior Detailing team at work" class="hero-img" width="592" height="450" loading="eager" onload="this.style.opacity=1">
             </div>
         </div>
     </section>

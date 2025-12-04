@@ -243,13 +243,14 @@
 
         .hero-img {
             width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 10;
+            height: 500px;
             object-fit: cover;
             border-radius: 20px;
             border: 2px solid rgba(255, 255, 255, 0.1);
             position: relative;
             z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
         }
 
         /* Stats Section */
@@ -863,7 +864,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/main image.jpeg" alt="Professional exterior detailing" class="hero-img" width="800" height="500" loading="eager">
+                <img src="assets/main image.jpeg" alt="Professional exterior detailing" class="hero-img" width="592" height="500" loading="eager" onload="this.style.opacity=1">
             </div>
         </div>
     </section>
