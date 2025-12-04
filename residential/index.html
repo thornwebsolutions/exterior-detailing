@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Residential Services - Exterior Detailing Naples</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,12 +31,13 @@
         .hero { margin-top: 80px; min-height: 70vh; background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%); color: white; display: flex; align-items: center; position: relative; overflow: hidden; }
         .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'); opacity: 0.5; }
         .hero-content { max-width: 1400px; margin: 0 auto; padding: 4rem 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; width: 100%; box-sizing: border-box; }
+        .hero-text { opacity: 0; transition: opacity 0.3s ease-in; }
         .hero-text h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; color: #ffffff; }
         .hero-text p { font-size: 1.3rem; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9); line-height: 1.8; }
-        .hero-image { position: relative; }
+        .hero-image { position: relative; opacity: 0; transition: opacity 0.3s ease-in; }
         .hero-image::before { content: ''; position: absolute; top: -20px; left: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
         .hero-image::after { content: ''; position: absolute; bottom: -20px; right: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
-        .hero-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 1; opacity: 0; transition: opacity 0.3s ease-in; }
+        .hero-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 1; }
         .primary-button { background: #00CED1; color: white; padding: 1.2rem 3rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: transform 0.3s, background 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2); display: inline-block; white-space: nowrap; }
         .primary-button:hover { transform: translateY(-3px); background: #00B5B8; box-shadow: 0 6px 20px rgba(0, 206, 209, 0.25); }
 
@@ -170,7 +172,7 @@
                 <a href="/contact/" class="primary-button">Request a Free Home Estimate</a>
             </div>
             <div class="hero-image">
-                <img src="../assets/IMG_9944.jpeg" alt="Luxury home exterior cleaning" class="hero-img" width="592" height="450" loading="eager" onload="this.style.opacity=1">
+                <img src="../assets/IMG_9944.jpeg" alt="Luxury home exterior cleaning" class="hero-img" width="592" height="450" loading="eager" onload="this.parentElement.style.opacity=1; this.parentElement.previousElementSibling.style.opacity=1">
             </div>
         </div>
     </section>

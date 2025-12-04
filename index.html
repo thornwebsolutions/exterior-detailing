@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A. Sardina Exterior Detailing - Premium Pressure Washing Services</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,6 +147,11 @@
             z-index: 1;
         }
 
+        .hero-text {
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+        }
+
         .hero-text h1 {
             font-size: 4rem;
             font-weight: 900;
@@ -213,6 +219,8 @@
 
         .hero-image {
             position: relative;
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
         }
 
         .hero-image::before {
@@ -249,8 +257,6 @@
             border: 2px solid rgba(255, 255, 255, 0.1);
             position: relative;
             z-index: 1;
-            opacity: 0;
-            transition: opacity 0.3s ease-in;
         }
 
         /* Stats Section */
@@ -864,7 +870,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/main image.jpeg" alt="Professional exterior detailing" class="hero-img" width="592" height="500" loading="eager" onload="this.style.opacity=1">
+                <img src="assets/main image.jpeg" alt="Professional exterior detailing" class="hero-img" width="592" height="500" loading="eager" onload="this.parentElement.style.opacity=1; this.parentElement.previousElementSibling.style.opacity=1">
             </div>
         </div>
     </section>
