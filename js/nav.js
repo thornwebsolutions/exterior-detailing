@@ -3,7 +3,7 @@
     <nav>
         <div class="nav-container">
             <a href="/" class="logo">
-                <span class="logo-main">Exterior Detailing</span>
+                <img src="/assets/logo.png" alt="A. Sandino Exterior Detailing" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
