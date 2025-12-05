@@ -14,65 +14,73 @@
     <link rel="preload" as="image" href="../assets/IMG_8083.jpeg">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1a1a1a; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #ffffff; background: #0a1628; overflow-x: hidden; }
         h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
 
         /* Navigation */
-        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 1.2rem 5%; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(10px); padding: 1.2rem 5%; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .logo { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
-        .logo-main { font-size: 1.5rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: #1a1a1a; position: relative; padding-bottom: 4px; }
+        .logo-main { font-size: 1.5rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; position: relative; padding-bottom: 4px; }
         .logo-main::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #00CED1, #5DD3E8); }
         .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: #333; font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
+        .nav-links a { text-decoration: none; color: rgba(255, 255, 255, 0.9); font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
         .nav-links a:hover { color: #00CED1; }
         .cta-button { background: #00CED1; color: white; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 2px 8px rgba(0, 206, 209, 0.15); }
         .cta-button:hover { transform: translateY(-2px); background: #00B5B8; box-shadow: 0 4px 12px rgba(0, 206, 209, 0.2); }
 
         /* Hero Section */
-        .hero { margin-top: 80px; min-height: 70vh; background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%); color: white; display: flex; align-items: center; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'); opacity: 0.5; }
-        .hero-content { max-width: 1400px; margin: 0 auto; padding: 4rem 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
-        .hero-text { opacity: 0; transition: opacity 0.3s ease-in; }
+        .hero { margin-top: 80px; min-height: 70vh; background: url('../assets/IMG_8083.jpeg') center/cover no-repeat; color: white; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10, 22, 40, 0.6); }
+        .hero-content { max-width: 900px; margin: 0 auto; padding: 4rem 5%; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; }
+        .hero-text { text-align: center; }
         .hero-text h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; color: #ffffff; }
         .hero-text p { font-size: 1.2rem; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9); line-height: 1.8; }
-        .hero-image { position: relative; opacity: 0; transition: opacity 0.3s ease-in; }
-        .hero-image::before { content: ''; position: absolute; top: -20px; left: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
-        .hero-image::after { content: ''; position: absolute; bottom: -20px; right: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
-        .hero-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 1; }
 
         /* Story Section */
-        .story { padding: 5rem 5%; background: white; }
+        .story { padding: 5rem 5%; background: #0a1628; }
         .story-content { max-width: 900px; margin: 0 auto; }
-        .story-content h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: #1a1a1a; text-align: center; }
+        .story-content h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: #ffffff; text-align: center; }
         .story-content .lead { font-size: 1.3rem; color: #00CED1; font-weight: 600; text-align: center; margin-bottom: 2rem; }
-        .story-content p { font-size: 1.1rem; color: #666; line-height: 1.9; margin-bottom: 1.5rem; }
+        .story-content p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.7); line-height: 1.9; margin-bottom: 1.5rem; }
         .story-list { list-style: none; margin: 2rem 0; }
-        .story-list li { padding: 0.75rem 0; font-size: 1.1rem; color: #333; display: flex; align-items: center; gap: 1rem; }
+        .story-list li { padding: 0.75rem 0; font-size: 1.1rem; color: rgba(255, 255, 255, 0.8); display: flex; align-items: center; gap: 1rem; }
         .story-list li i { color: #00CED1; font-size: 1.2rem; }
 
         /* Difference Section */
-        .difference { padding: 5rem 5%; background: #f8f9fa; }
+        .difference { padding: 5rem 5%; background: #111d2e; }
         .section-header { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
-        .section-header h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; color: #1a1a1a; }
-        .section-header p { font-size: 1.1rem; color: #666; line-height: 1.8; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; color: #ffffff; }
+        .section-header p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8; }
         .difference-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .difference-card { background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s; }
-        .difference-card:hover { transform: translateY(-5px); }
+        .difference-card { background: #1a2940; padding: 2rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .difference-card:hover { transform: translateY(-5px); box-shadow: 0 8px 35px rgba(0, 206, 209, 0.15); }
         .difference-card .number { font-size: 3rem; font-weight: 900; color: #00CED1; font-family: 'Oswald', sans-serif; margin-bottom: 0.5rem; }
-        .difference-card h3 { font-size: 1.3rem; margin-bottom: 1rem; color: #1a1a1a; }
-        .difference-card p { color: #666; line-height: 1.8; }
+        .difference-card h3 { font-size: 1.3rem; margin-bottom: 1rem; color: #ffffff; }
+        .difference-card p { color: rgba(255, 255, 255, 0.7); line-height: 1.8; }
 
         /* Team Section */
-        .team { padding: 5rem 5%; background: white; }
-        .team-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .team-card { text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 16px; transition: transform 0.3s; }
-        .team-card:hover { transform: translateY(-5px); }
-        .team-avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #00CED1, #5DD3E8); margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; }
-        .team-avatar i { font-size: 3rem; color: white; }
-        .team-card h3 { font-size: 1.3rem; margin-bottom: 0.25rem; color: #1a1a1a; }
-        .team-card .role { color: #00CED1; font-weight: 600; margin-bottom: 1rem; font-size: 0.9rem; }
-        .team-card p { color: #666; font-size: 0.95rem; line-height: 1.7; }
+        .team { padding: 5rem 5%; background: #0a1628; }
+        .team-container { max-width: 1200px; margin: 0 auto; }
+
+        /* Featured Founder Card */
+        .team-featured { background: #1a2940; border-radius: 20px; border: 2px solid rgba(0, 206, 209, 0.3); padding: 3rem; display: flex; gap: 3rem; align-items: center; margin-bottom: 3rem; box-shadow: 0 10px 40px rgba(0, 206, 209, 0.1); }
+        .team-featured-image { width: 220px; height: 220px; border-radius: 16px; background: linear-gradient(135deg, #00CED1, #5DD3E8); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+        .team-featured-image i { font-size: 5rem; color: white; }
+        .team-featured-content { flex: 1; }
+        .team-featured-content h3 { font-size: 2rem; margin-bottom: 0.5rem; color: #ffffff; }
+        .team-featured-content .role { color: #00CED1; font-weight: 700; margin-bottom: 1.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .team-featured-content p { color: rgba(255, 255, 255, 0.8); font-size: 1.1rem; line-height: 1.8; }
+
+        /* Other Team Members Grid */
+        .team-others { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .team-card { text-align: center; padding: 2rem; background: #1a2940; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .team-card:hover { transform: translateY(-5px); box-shadow: 0 8px 35px rgba(0, 206, 209, 0.15); }
+        .team-avatar { width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #00CED1, #5DD3E8); margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; }
+        .team-avatar i { font-size: 2.5rem; color: white; }
+        .team-card h3 { font-size: 1.2rem; margin-bottom: 0.25rem; color: #ffffff; }
+        .team-card .role { color: #00CED1; font-weight: 600; margin-bottom: 1rem; font-size: 0.85rem; }
+        .team-card p { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; line-height: 1.7; }
 
         /* Promise Section */
         .promise { padding: 5rem 5%; background: linear-gradient(135deg, #0a1628, #1a2940); color: white; }
@@ -85,16 +93,16 @@
         .promise-note { text-align: center; margin-top: 3rem; font-size: 1.1rem; color: rgba(255,255,255,0.8); font-style: italic; }
 
         /* Equipment Image */
-        .equipment { padding: 5rem 5%; background: #f8f9fa; }
+        .equipment { padding: 5rem 5%; background: #111d2e; }
         .equipment-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .equipment-text h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #1a1a1a; }
-        .equipment-text p { font-size: 1.1rem; color: #666; line-height: 1.8; }
-        .equipment-image img { width: 100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .equipment-text h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #ffffff; }
+        .equipment-text p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8; }
+        .equipment-image img { width: 100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
 
         /* CTA Section */
-        .cta-section { padding: 5rem 5%; background: white; text-align: center; }
+        .cta-section { padding: 5rem 5%; background: #0a1628; text-align: center; }
         .cta-content { max-width: 800px; margin: 0 auto; }
-        .cta-content h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; color: #1a1a1a; }
+        .cta-content h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; color: #ffffff; }
         .cta-button-large { background: #00CED1; color: white; padding: 1.5rem 4rem; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.2rem; display: inline-block; transition: transform 0.3s, box-shadow 0.3s, background 0.3s; box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2); }
         .cta-button-large:hover { transform: translateY(-3px); background: #00B5B8; box-shadow: 0 6px 20px rgba(0, 206, 209, 0.25); }
 
@@ -109,13 +117,13 @@
 
         /* Hamburger Menu */
         .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; padding: 10px; }
-        .hamburger span { width: 25px; height: 3px; background: #1a1a1a; border-radius: 2px; transition: all 0.3s; }
+        .hamburger span { width: 25px; height: 3px; background: #ffffff; border-radius: 2px; transition: all 0.3s; }
         .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-        .mobile-menu { display: none; position: fixed; top: 80px; left: 0; right: 0; background: white; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 999; }
+        .mobile-menu { display: none; position: fixed; top: 80px; left: 0; right: 0; background: #0a1628; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 999; }
         .mobile-menu.active { display: block; }
-        .mobile-menu a { display: block; padding: 1rem 0; color: #1a1a1a; text-decoration: none; font-weight: 600; border-bottom: 1px solid #eee; }
+        .mobile-menu a { display: block; padding: 1rem 0; color: #ffffff; text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
         .mobile-menu a:hover { color: #00CED1; }
 
         /* Responsive */
@@ -128,8 +136,14 @@
             .equipment-content { grid-template-columns: 1fr; }
             .promise-grid { grid-template-columns: repeat(2, 1fr); }
             .section-header h2 { font-size: 2rem; }
-            .hero-image::before { left: -18px; }
-            .hero-image::after { bottom: -5px; }
+            .team-featured { flex-direction: column; text-align: center; padding: 2rem; gap: 2rem; }
+            .team-featured-image { width: 180px; height: 180px; }
+            .team-featured-image i { font-size: 4rem; }
+            .team-featured-content h3 { font-size: 1.6rem; }
+            .team-others { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .team-others { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -144,9 +158,6 @@
             <div class="hero-text">
                 <h1>A Family Committed<br>to Excellence</h1>
                 <p>Exterior Detailing is a Sardina family owned-operated company providing Naples with the highest standard of low-pressure, eco-friendly exterior cleaning.</p>
-            </div>
-            <div class="hero-image">
-                <img src="../assets/IMG_8083.jpeg" alt="Exterior Detailing team at work" class="hero-img" width="592" height="450" loading="eager" onload="this.parentElement.style.opacity=1; this.parentElement.previousElementSibling.style.opacity=1">
             </div>
         </div>
     </section>
@@ -207,30 +218,38 @@
             <h2>Meet the Team</h2>
             <p>A team you can trust on your property</p>
         </div>
-        <div class="team-grid">
-            <div class="team-card">
-                <div class="team-avatar"><i class="fas fa-user"></i></div>
-                <h3>Alex Sardina</h3>
-                <p class="role">Founder / Technical Lead</p>
-                <p>Leading the technical operations and ensuring every job meets our high standards.</p>
+        <div class="team-container">
+            <!-- Featured Founder -->
+            <div class="team-featured">
+                <div class="team-featured-image">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="team-featured-content">
+                    <h3>Alex Sardina</h3>
+                    <p class="role">Founder / Technical Lead</p>
+                    <p>Leading the technical operations and ensuring every job meets our high standards.</p>
+                </div>
             </div>
-            <div class="team-card">
-                <div class="team-avatar"><i class="fas fa-user"></i></div>
-                <h3>John Sardina</h3>
-                <p class="role">Co-Owner / Operations</p>
-                <p>Oversees day-to-day client communication, field operations, and quality control. Known for high standards and flawless execution.</p>
-            </div>
-            <div class="team-card">
-                <div class="team-avatar"><i class="fas fa-user"></i></div>
-                <h3>Trevin Nelson</h3>
-                <p class="role">Exterior Care Specialist</p>
-                <p>Dedicated technician committed to delivering exceptional results on every project.</p>
-            </div>
-            <div class="team-card">
-                <div class="team-avatar"><i class="fas fa-user"></i></div>
-                <h3>Ryder Gwynn</h3>
-                <p class="role">Exterior Care Specialist</p>
-                <p>Skilled professional focused on attention to detail and customer satisfaction.</p>
+            <!-- Other Team Members -->
+            <div class="team-others">
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fas fa-user"></i></div>
+                    <h3>John Sardina</h3>
+                    <p class="role">Co-Owner / Operations</p>
+                    <p>Oversees day-to-day client communication, field operations, and quality control. Known for high standards and flawless execution.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fas fa-user"></i></div>
+                    <h3>Trevin Nelson</h3>
+                    <p class="role">Exterior Care Specialist</p>
+                    <p>Dedicated technician committed to delivering exceptional results on every project.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fas fa-user"></i></div>
+                    <h3>Ryder Gwynn</h3>
+                    <p class="role">Exterior Care Specialist</p>
+                    <p>Skilled professional focused on attention to detail and customer satisfaction.</p>
+                </div>
             </div>
         </div>
     </section>

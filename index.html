@@ -22,7 +22,8 @@
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
+            color: #ffffff;
+            background: #0a1628;
             overflow-x: hidden;
         }
 
@@ -37,11 +38,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(10, 22, 40, 0.95);
             backdrop-filter: blur(10px);
             padding: 1.2rem 5%;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
         }
 
         .nav-container {
@@ -64,7 +65,7 @@
             font-weight: 900;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: #1a1a1a;
+            color: #ffffff;
             position: relative;
             padding-bottom: 4px;
         }
@@ -87,7 +88,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: rgba(255, 255, 255, 0.9);
             font-weight: 600;
             font-size: 0.95rem;
             transition: color 0.3s;
@@ -118,10 +119,11 @@
         .hero {
             margin-top: 80px;
             min-height: 90vh;
-            background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
+            background: url('assets/main image.jpeg') center bottom/cover no-repeat;
             color: white;
             display: flex;
             align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
         }
@@ -133,25 +135,23 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-            opacity: 0.5;
+            background: rgba(10, 22, 40, 0.6);
         }
 
         .hero-content {
-            max-width: 1400px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 4rem 5%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
             position: relative;
             z-index: 1;
         }
 
         .hero-text {
-            opacity: 0;
-            transition: opacity 0.3s ease-in;
+            text-align: center;
         }
 
         .hero-text h1 {
@@ -173,6 +173,7 @@
             display: flex;
             gap: 1.5rem;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .hero-tagline {
@@ -219,53 +220,10 @@
             border-color: white;
         }
 
-        .hero-image {
-            position: relative;
-            opacity: 0;
-            transition: opacity 0.3s ease-in;
-        }
-
-        .hero-image::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -30px;
-            width: 155px;
-            height: 155px;
-            background-image: radial-gradient(circle, #00CED1 3px, transparent 3px);
-            background-size: 20px 20px;
-            opacity: 0.6;
-            z-index: 0;
-        }
-
-        .hero-image::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            right: -30px;
-            width: 155px;
-            height: 155px;
-            background-image: radial-gradient(circle, #00CED1 3px, transparent 3px);
-            background-size: 20px 20px;
-            opacity: 0.6;
-            z-index: 0;
-        }
-
-        .hero-img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            z-index: 1;
-        }
-
         /* Stats Section */
         .stats {
-            background: white;
+            background: #111d2e;
             padding: 4rem 5%;
-            box-shadow: 0 -5px 30px rgba(0,0,0,0.05);
         }
 
         .stats-container {
@@ -280,12 +238,12 @@
         .stat-item h3 {
             font-size: 3.5rem;
             font-weight: 900;
-            color: #1a1a1a;
+            color: #ffffff;
             margin-bottom: 0.5rem;
         }
 
         .stat-item p {
-            color: #666;
+            color: rgba(255, 255, 255, 0.7);
             font-weight: 600;
             font-size: 1.1rem;
         }
@@ -293,7 +251,7 @@
         /* Benefits Section */
         .benefits {
             padding: 6rem 5%;
-            background: white;
+            background: #0a1628;
         }
 
         .section-header {
@@ -306,21 +264,13 @@
             font-size: 3rem;
             font-weight: 900;
             margin-bottom: 1rem;
-            color: #1a1a1a;
-        }
-
-        .process .section-header h2 {
             color: #ffffff;
         }
 
         .section-header p {
             font-size: 1.2rem;
-            color: #666;
+            color: rgba(255, 255, 255, 0.7);
             line-height: 1.8;
-        }
-
-        .process .section-header p {
-            color: rgba(255, 255, 255, 0.8);
         }
 
         .benefits-grid {
@@ -332,16 +282,16 @@
         }
 
         .benefit-card {
-            background: white;
+            background: #1a2940;
             padding: 2.5rem;
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, border-color 0.3s;
         }
 
         .benefit-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 35px rgba(0,0,0,0.12);
+            border-color: #00CED1;
         }
 
         .benefit-icon {
@@ -359,18 +309,18 @@
             font-size: 1.5rem;
             font-weight: 800;
             margin-bottom: 1rem;
-            color: #1a1a1a;
+            color: #ffffff;
         }
 
         .benefit-card p {
-            color: #666;
+            color: rgba(255, 255, 255, 0.7);
             line-height: 1.8;
         }
 
         /* Services Section */
         .services {
             padding: 6rem 5%;
-            background: white;
+            background: #111d2e;
         }
 
         .services-grid {
@@ -382,17 +332,16 @@
         }
 
         .service-card {
-            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            background: #1a2940;
             border-radius: 16px;
             overflow: hidden;
-            border: 2px solid #e9ecef;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s;
         }
 
         .service-card:hover {
             border-color: #00CED1;
             transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 206, 209, 0.15);
         }
 
         .service-content {
@@ -419,12 +368,12 @@
         .service-header h3 {
             font-size: 1.5rem;
             font-weight: 800;
-            color: #1a1a1a;
+            color: #ffffff;
             margin: 0;
         }
 
         .service-content p {
-            color: #666;
+            color: rgba(255, 255, 255, 0.7);
             line-height: 1.8;
             margin-bottom: 1.5rem;
         }
@@ -436,7 +385,7 @@
 
         .service-features li {
             padding: 0.5rem 0;
-            color: #333;
+            color: rgba(255, 255, 255, 0.8);
             font-weight: 500;
             display: flex;
             align-items: center;
@@ -499,7 +448,7 @@
         /* Testimonials */
         .testimonials {
             padding: 6rem 5%;
-            background: white;
+            background: #0a1628;
         }
 
         .testimonials-grid {
@@ -511,10 +460,10 @@
         }
 
         .testimonial-card {
-            background: white;
+            background: #1a2940;
             padding: 2.5rem;
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .testimonial-rating {
@@ -526,7 +475,7 @@
         .testimonial-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #333;
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 1.5rem;
             font-style: italic;
         }
@@ -537,14 +486,14 @@
         }
 
         .testimonial-location {
-            color: #666;
+            color: rgba(255, 255, 255, 0.6);
             font-size: 0.9rem;
         }
 
         /* Visual Proof Section */
         .visual-proof {
             padding: 6rem 5%;
-            background: #f8f9fa;
+            background: #111d2e;
         }
 
         .visual-proof .testimonials-grid {
@@ -556,10 +505,10 @@
         }
 
         .visual-proof .testimonial-card {
-            background: white;
+            background: #1a2940;
             padding: 2.5rem;
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .visual-proof .testimonial-rating {
@@ -571,7 +520,7 @@
         .visual-proof .testimonial-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #333;
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 1.5rem;
             font-style: italic;
         }
@@ -582,14 +531,14 @@
         }
 
         .visual-proof .testimonial-location {
-            color: #666;
+            color: rgba(255, 255, 255, 0.6);
             font-size: 0.9rem;
         }
 
         /* Service Area Section */
         .service-area {
             padding: 6rem 5%;
-            background: white;
+            background: #0a1628;
         }
 
         .areas-list {
@@ -602,12 +551,12 @@
         }
 
         .area-tag {
-            background: #f8f9fa;
-            border: 1px solid #e0e0e0;
+            background: #1a2940;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 0.75rem 1.5rem;
             border-radius: 50px;
             font-weight: 600;
-            color: #1a1a1a;
+            color: #ffffff;
             transition: all 0.3s;
         }
 
@@ -724,7 +673,7 @@
         .hamburger span {
             width: 25px;
             height: 3px;
-            background: #1a1a1a;
+            background: #ffffff;
             border-radius: 2px;
             transition: all 0.3s;
         }
@@ -747,9 +696,9 @@
             top: 80px;
             left: 0;
             right: 0;
-            background: white;
+            background: #0a1628;
             padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             z-index: 999;
         }
 
@@ -760,10 +709,10 @@
         .mobile-menu a {
             display: block;
             padding: 1rem 0;
-            color: #1a1a1a;
+            color: #ffffff;
             text-decoration: none;
             font-weight: 600;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .mobile-menu a:hover {
@@ -844,9 +793,6 @@
                     <a href="/contact/" class="primary-button">Request a Quote</a>
                     <a href="/commercial/" class="secondary-button">Commercial Services</a>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="assets/main image.jpeg" alt="Professional exterior detailing" class="hero-img" width="592" height="500" loading="eager" onload="this.parentElement.style.opacity=1; this.parentElement.previousElementSibling.style.opacity=1">
             </div>
         </div>
     </section>

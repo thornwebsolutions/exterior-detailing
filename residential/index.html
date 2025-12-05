@@ -14,58 +14,54 @@
     <link rel="preload" as="image" href="../assets/IMG_9944.jpeg">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1a1a1a; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #ffffff; background: #0a1628; overflow-x: hidden; }
         h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
 
         /* Navigation */
-        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 1.2rem 5%; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(10px); padding: 1.2rem 5%; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .logo { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
-        .logo-main { font-size: 1.5rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: #1a1a1a; position: relative; padding-bottom: 4px; }
+        .logo-main { font-size: 1.5rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; position: relative; padding-bottom: 4px; }
         .logo-main::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #00CED1, #5DD3E8); }
         .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: #333; font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
+        .nav-links a { text-decoration: none; color: rgba(255, 255, 255, 0.9); font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
         .nav-links a:hover { color: #00CED1; }
         .cta-button { background: #00CED1; color: white; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 2px 8px rgba(0, 206, 209, 0.15); white-space: nowrap; }
         .cta-button:hover { transform: translateY(-2px); background: #00B5B8; box-shadow: 0 4px 12px rgba(0, 206, 209, 0.2); }
 
         /* Hero Section */
-        .hero { margin-top: 80px; min-height: 70vh; background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%); color: white; display: flex; align-items: center; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'); opacity: 0.5; }
-        .hero-content { max-width: 1400px; margin: 0 auto; padding: 4rem 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; width: 100%; box-sizing: border-box; }
-        .hero-text { opacity: 0; transition: opacity 0.3s ease-in; }
+        .hero { margin-top: 80px; min-height: 70vh; background: url('../assets/IMG_9944.jpeg') center/cover no-repeat; color: white; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10, 22, 40, 0.6); }
+        .hero-content { max-width: 900px; margin: 0 auto; padding: 4rem 5%; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; }
+        .hero-text { text-align: center; }
         .hero-text h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; color: #ffffff; }
         .hero-text p { font-size: 1.3rem; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9); line-height: 1.8; }
-        .hero-image { position: relative; opacity: 0; transition: opacity 0.3s ease-in; }
-        .hero-image::before { content: ''; position: absolute; top: -20px; left: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
-        .hero-image::after { content: ''; position: absolute; bottom: -20px; right: -30px; width: 155px; height: 155px; background-image: radial-gradient(circle, #00CED1 3px, transparent 3px); background-size: 20px 20px; opacity: 0.6; z-index: 0; }
-        .hero-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 1; }
         .primary-button { background: #00CED1; color: white; padding: 1.2rem 3rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: transform 0.3s, background 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2); display: inline-block; white-space: nowrap; }
         .primary-button:hover { transform: translateY(-3px); background: #00B5B8; box-shadow: 0 6px 20px rgba(0, 206, 209, 0.25); }
 
         /* Benefits Section */
-        .benefits { padding: 5rem 5%; background: white; }
+        .benefits { padding: 5rem 5%; background: #0a1628; }
         .section-header { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
-        .section-header h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; color: #1a1a1a; }
-        .section-header p { font-size: 1.1rem; color: #666; line-height: 1.8; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; color: #ffffff; }
+        .section-header p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8; }
         .benefits-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .benefit-card { background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
-        .benefit-card:hover { transform: translateY(-5px); box-shadow: 0 8px 35px rgba(0,0,0,0.12); }
+        .benefit-card { background: #1a2940; padding: 2rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+        .benefit-card:hover { transform: translateY(-5px); box-shadow: 0 8px 35px rgba(0, 206, 209, 0.15); }
         .benefit-icon { font-size: 2.5rem; margin-bottom: 1rem; color: #00CED1; }
-        .benefit-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; color: #1a1a1a; }
-        .benefit-card p { color: #666; font-size: 0.95rem; }
+        .benefit-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; color: #ffffff; }
+        .benefit-card p { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
 
         /* Services Section */
-        .services { padding: 5rem 5%; background: #f8f9fa; }
+        .services { padding: 5rem 5%; background: #111d2e; }
         .services-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-        .service-card { background: white; border-radius: 12px; padding: 1.5rem; border: 2px solid #e9ecef; transition: all 0.3s; }
-        .service-card:hover { border-color: #00CED1; transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0, 206, 209, 0.1); }
-        .service-card h3 { font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .service-card { background: #1a2940; border-radius: 12px; padding: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s; }
+        .service-card:hover { border-color: #00CED1; transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0, 206, 209, 0.15); }
+        .service-card h3 { font-size: 1.1rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
         .service-card h3 i { color: #00CED1; }
-        .service-card p { color: #666; font-size: 0.9rem; }
+        .service-card p { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; }
 
         /* Gallery Section */
-        .gallery { padding: 5rem 5%; background: white; }
+        .gallery { padding: 5rem 5%; background: #0a1628; }
         .gallery-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         .gallery-item { border-radius: 16px; overflow: hidden; height: 300px; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
@@ -84,15 +80,15 @@
         .plan-card p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
 
         /* Golden Grove Connection */
-        .connection { padding: 4rem 5%; background: #f8f9fa; }
+        .connection { padding: 4rem 5%; background: #111d2e; }
         .connection-content { max-width: 900px; margin: 0 auto; text-align: center; }
-        .connection-content h2 { font-size: 2rem; margin-bottom: 1rem; color: #1a1a1a; }
-        .connection-content p { font-size: 1.1rem; color: #666; line-height: 1.8; }
+        .connection-content h2 { font-size: 2rem; margin-bottom: 1rem; color: #ffffff; }
+        .connection-content p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8; }
 
         /* CTA Section */
-        .cta-section { padding: 5rem 5%; background: white; text-align: center; }
+        .cta-section { padding: 5rem 5%; background: #0a1628; text-align: center; }
         .cta-content { max-width: 800px; margin: 0 auto; }
-        .cta-content h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; color: #1a1a1a; }
+        .cta-content h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; color: #ffffff; }
         .cta-button-large { background: #00CED1; color: white; padding: 1.5rem 4rem; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.2rem; display: inline-block; transition: transform 0.3s, box-shadow 0.3s, background 0.3s; box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2); }
         .cta-button-large:hover { transform: translateY(-3px); background: #00B5B8; box-shadow: 0 6px 20px rgba(0, 206, 209, 0.25); }
 
@@ -107,13 +103,13 @@
 
         /* Hamburger Menu */
         .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; padding: 10px; }
-        .hamburger span { width: 25px; height: 3px; background: #1a1a1a; border-radius: 2px; transition: all 0.3s; }
+        .hamburger span { width: 25px; height: 3px; background: #ffffff; border-radius: 2px; transition: all 0.3s; }
         .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-        .mobile-menu { display: none; position: fixed; top: 80px; left: 0; right: 0; background: white; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 999; }
+        .mobile-menu { display: none; position: fixed; top: 80px; left: 0; right: 0; background: #0a1628; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 999; }
         .mobile-menu.active { display: block; }
-        .mobile-menu a { display: block; padding: 1rem 0; color: #1a1a1a; text-decoration: none; font-weight: 600; border-bottom: 1px solid #eee; }
+        .mobile-menu a { display: block; padding: 1rem 0; color: #ffffff; text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
         .mobile-menu a:hover { color: #00CED1; }
 
         /* Responsive */
@@ -121,16 +117,12 @@
             .hamburger { display: flex; }
             .nav-links, .cta-button { display: none; }
             .logo-main { font-size: 1.1rem; letter-spacing: 1px; }
-            .hero-content { grid-template-columns: 1fr; text-align: center; padding: 3rem 1.5rem; }
-            .hero-text { display: flex; flex-direction: column; align-items: center; }
-            .hero-image { display: flex; justify-content: center; }
+            .hero-content { padding: 3rem 1.5rem; }
             .hero-text h1 { font-size: 2.2rem; }
             .benefits-grid { grid-template-columns: 1fr; }
             .plans-grid { grid-template-columns: 1fr; }
             .gallery-grid { grid-template-columns: 1fr; }
             .section-header h2 { font-size: 2rem; }
-            .hero-image::before { left: -18px; }
-            .hero-image::after { bottom: -5px; }
         }
     </style>
 </head>
@@ -146,9 +138,6 @@
                 <h1>Home & Estate<br>Exterior Cleaning</h1>
                 <p>Low-pressure, eco-friendly soft washing for Naples' finest homes.</p>
                 <a href="/contact/" class="primary-button">Request a Free Home Estimate</a>
-            </div>
-            <div class="hero-image">
-                <img src="../assets/IMG_9944.jpeg" alt="Luxury home exterior cleaning" class="hero-img" width="592" height="450" loading="eager" onload="this.parentElement.style.opacity=1; this.parentElement.previousElementSibling.style.opacity=1">
             </div>
         </div>
     </section>
