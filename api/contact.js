@@ -15,7 +15,12 @@ export default async function handler(req, res) {
   // Set CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  const { firstName, lastName, email, phone, service, message } = req.body;
+  const { firstName, lastName, email, phone, service, message, website } = req.body;
+
+  // Honeypot check - if filled, it's likely a bot
+  if (website) {
+    return res.status(200).json({ success: true, message: 'Email sent successfully' });
+  }
 
   const subject = 'New Quote Request - Exterior Detailing';
   const htmlContent = `

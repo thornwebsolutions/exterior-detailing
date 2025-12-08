@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Exterior Detailing Naples</title>
+    <meta name="description" content="Get a free estimate from Exterior Detailing Naples. Contact us for professional pressure washing and soft wash services. We respond within 24 hours.">
+    <link rel="canonical" href="https://exteriordetailing.com/contact/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us - Exterior Detailing Naples">
+    <meta property="og:description" content="Get a free estimate from Exterior Detailing Naples. Contact us for professional pressure washing and soft wash services. We respond within 24 hours.">
+    <meta property="og:image" content="https://exteriordetailing.com/assets/logo.jpg">
+    <meta property="og:url" content="https://exteriordetailing.com/contact/">
+    <meta property="og:type" content="website">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -139,6 +158,10 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" placeholder="Tell us about your property and what you're looking for..."></textarea>
                 </div>
+                <!-- Honeypot field - hidden from humans, catches bots -->
+                <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
                 <button type="submit" class="submit-button">Submit Request</button>
             </form>
             <div class="contact-info">
@@ -167,7 +190,8 @@
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
                 service: document.getElementById('service').value,
-                message: document.getElementById('message').value
+                message: document.getElementById('message').value,
+                website: document.getElementById('website').value // honeypot
             };
 
             try {

@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; ${new Date().getFullYear()} Exterior Detailing. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} Exterior Detailing. All rights reserved. | <a href="https://thornwebsolutions.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#00CED1'" onmouseout="this.style.color='inherit'">Website by Thorn Web Solutions</a></p>
             <p class="footer-tagline">Sardina family owned & operated</p>
         </div>
     `;
