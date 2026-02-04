@@ -3,12 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exterior Detailing Naples - Under Construction</title>
-    <meta name="description" content="Exterior Detailing Naples - We're making improvements. Check back soon!">
+    <title>Exterior Detailing Naples - Premium Pressure Washing Services</title>
+    <meta name="description" content="Naples' premier softwash and exterior care specialists. Professional roof washing, paver cleaning, home soft wash, and pool deck services. Family owned & operated.">
+    <link rel="canonical" href="https://exteriordetailing.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Exterior Detailing Naples - Premium Pressure Washing Services">
+    <meta property="og:description" content="Naples' premier softwash and exterior care specialists. Professional roof washing, paver cleaning, home soft wash, and pool deck services.">
+    <meta property="og:image" content="https://exteriordetailing.com/assets/logo.jpg">
+    <meta property="og:url" content="https://exteriordetailing.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Exterior Detailing",
+      "description": "Naples' premier softwash and exterior care specialists offering roof washing, paver cleaning, home soft wash, and pool deck services.",
+      "url": "https://exteriordetailing.com",
+      "telephone": "(555) 123-4567",
+      "email": "alex@exteriordetailing.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Naples",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "areaServed": ["Naples", "Pelican Bay", "Park Shore", "Moorings", "Pine Ridge", "Bonita", "Marco Island"],
+      "priceRange": "$$"
+    }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="assets/main image.jpeg">
     <style>
         * {
             margin: 0;
@@ -18,48 +61,1004 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: #0a1628;
+            line-height: 1.6;
             color: #ffffff;
-            text-align: center;
-            padding: 2rem;
+            background: #0a1628;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 500px;
+        h1, h2, h3, h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            width: 200px;
-            height: auto;
-            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+            text-decoration: none;
         }
 
-        h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2.5rem;
+        .logo-main {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            color: #ffffff;
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        .logo-main::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #00CED1, #5DD3E8);
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
             color: #00CED1;
+        }
+
+        .cta-button {
+            background: #0099a3;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 153, 163, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: #008891;
+            box-shadow: 0 4px 12px rgba(0, 153, 163, 0.15);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            background: url('assets/main image.jpeg') center bottom/cover no-repeat;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 22, 40, 0.6);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero-tagline {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        .primary-button {
+            background: #0099a3;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 153, 163, 0.15);
+            display: inline-block;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-3px);
+            background: #008891;
+            box-shadow: 0 6px 20px rgba(0, 153, 163, 0.2);
+        }
+
+        .secondary-button {
+            background: transparent;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .secondary-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #111d2e;
+            padding: 4rem 5%;
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 6rem 5%;
+            background: #0a1628;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+
+        .benefits-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .benefit-card {
+            background: #1a2940;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: #00CED1;
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #00CED1;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 5%;
+            background: #111d2e;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #1a2940;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #00CED1;
+            transform: translateY(-5px);
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
             margin-bottom: 1rem;
         }
 
-        p {
-            font-size: 1.1rem;
+        .service-icon {
+            font-size: 1.8rem;
+            color: #00CED1;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .service-header h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .service-content p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
             color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: #00CED1;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #0a1628, #1a2940);
+            color: white;
+        }
+
+        .process-steps {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: white;
+            color: #00CED1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .process-step h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .process-step p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 5%;
+            background: #0a1628;
+        }
+
+        .testimonials-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #1a2940;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-rating {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #00CED1;
+        }
+
+        .testimonial-location {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Visual Proof Section */
+        .visual-proof {
+            padding: 6rem 5%;
+            background: #111d2e;
+        }
+
+        .visual-proof .testimonials-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .visual-proof .testimonial-card {
+            background: #1a2940;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .visual-proof .testimonial-rating {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .visual-proof .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .visual-proof .testimonial-author {
+            font-weight: 700;
+            color: #00CED1;
+        }
+
+        .visual-proof .testimonial-location {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Service Area Section */
+        .service-area {
+            padding: 6rem 5%;
+            background: #0a1628;
+        }
+
+        .areas-list {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .area-tag {
+            background: #1a2940;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: #ffffff;
+            transition: all 0.3s;
+        }
+
+        .area-tag:hover {
+            background: #00CED1;
+            color: white;
+            border-color: #00CED1;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #0a1628, #1a2940);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-button-large {
+            background: #0099a3;
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 153, 163, 0.15);
+        }
+
+        .cta-button-large:hover {
+            transform: translateY(-3px);
+            background: #008891;
+            box-shadow: 0 6px 20px rgba(0, 153, 163, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a1628;
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #5DD3E8;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-tagline {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 10px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: #0a1628;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem 0;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu a:hover {
+            color: #00CED1;
+        }
+
+        /* Responsive */
+        @media (max-width: 1100px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links,
+            .cta-button {
+                display: none;
+            }
+
+            .logo-main {
+                font-size: 1.1rem;
+                letter-spacing: 1px;
+            }
+
+            .logo-main::after {
+                width: 100%;
+            }
+
+            .logo-img {
+                height: 35px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image::before {
+                left: -18px;
+            }
+
+            .hero-image::after {
+                bottom: -5px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .primary-button,
+            .secondary-button {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="assets/logo.png" alt="Exterior Detailing Logo" class="logo">
-        <h1>Under Construction</h1>
-        <p>We're making some improvements. Please check back soon!</p>
-    </div>
+    <!-- Navigation -->
+    <div id="nav"></div>
+    <script src="js/nav.js"></script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Low Pressure,<br>High Standards</h1>
+                <p>Naples' premier softwash and exterior care specialists.</p>
+                <div class="hero-buttons">
+                    <a href="/contact/" class="primary-button">Request a Quote</a>
+                    <a href="/commercial/" class="secondary-button">Commercial Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Exterior Detailing Section -->
+    <section class="benefits" id="why-us">
+        <div class="section-header">
+            <h2>Why Exterior Detailing</h2>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-spray-can-sparkles"></i></div>
+                <h3>Low Pressure Soft Wash</h3>
+                <p>Safe for roofs, paint, windows & landscaping.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Eco-Friendly Detergents</h3>
+                <p>Biodegradable, plant and animal safe solutions.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-file-shield"></i></div>
+                <h3>Licensed & Insured</h3>
+                <p>Fully licensed and insured for your peace of mind.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-people-roof"></i></div>
+                <h3>Family Owned & Operated</h3>
+                <p>Personal service and attention to detail from the Sardina family.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive exterior cleaning solutions tailored to your property's unique needs.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon"><i class="fas fa-home"></i></span>
+                        <h3>Roof Washing</h3>
+                    </div>
+                    <p>Safe, low-pressure roof cleaning that extends your roof's life by removing algae, moss, and organic buildup.</p>
+                    <ul class="service-features">
+                        <li>Shingle protection</li>
+                        <li>Tile cleaning</li>
+                        <li>Metal roof care</li>
+                        <li>Warranty-safe methods</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon"><i class="fas fa-th-large"></i></span>
+                        <h3>Paver Cleaning</h3>
+                    </div>
+                    <p>Restore your pavers to like-new condition with deep cleaning that removes dirt, weeds, and stains.</p>
+                    <ul class="service-features">
+                        <li>Deep stain removal</li>
+                        <li>Weed elimination</li>
+                        <li>Joint sand restoration</li>
+                        <li>Sealing available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon"><i class="fas fa-house-chimney"></i></span>
+                        <h3>Home Soft Wash</h3>
+                    </div>
+                    <p>Gentle soft-wash treatment that safely removes dirt, mold, and mildew from siding, stucco, and brick.</p>
+                    <ul class="service-features">
+                        <li>All siding types</li>
+                        <li>Stucco restoration</li>
+                        <li>Mold & mildew removal</li>
+                        <li>Paint-safe process</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon"><i class="fas fa-water"></i></span>
+                        <h3>Pool Decks</h3>
+                    </div>
+                    <p>Specialized cleaning for pool areas that removes algae, calcium deposits, and restores surfaces.</p>
+                    <ul class="service-features">
+                        <li>Algae removal</li>
+                        <li>Calcium treatment</li>
+                        <li>Restored finish</li>
+                        <li>Safety-focused</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon"><i class="fas fa-store"></i></span>
+                        <h3>Storefronts</h3>
+                    </div>
+                    <p>Professional storefront cleaning that enhances curb appeal and creates a welcoming environment for customers.</p>
+                    <ul class="service-features">
+                        <li>Window cleaning</li>
+                        <li>Sidewalk washing</li>
+                        <li>Awning cleaning</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon"><i class="fas fa-building"></i></span>
+                        <h3>HOAs</h3>
+                    </div>
+                    <p>Comprehensive cleaning services for homeowner associations, maintaining property values across the community.</p>
+                    <ul class="service-features">
+                        <li>Common area cleaning</li>
+                        <li>Entrance maintenance</li>
+                        <li>Bulk pricing available</li>
+                        <li>Scheduled programs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon"><i class="fas fa-eraser"></i></span>
+                        <h3>Stain Removal</h3>
+                    </div>
+                    <p>Targeted treatment for tough stains including rust, oil, grease, and organic discoloration on any surface.</p>
+                    <ul class="service-features">
+                        <li>Rust removal</li>
+                        <li>Oil & grease treatment</li>
+                        <li>Organic stains</li>
+                        <li>Surface-safe methods</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-header">
+                        <span class="service-icon"><i class="fas fa-calendar-check"></i></span>
+                        <h3>Maintenance Programs</h3>
+                    </div>
+                    <p>Keep your property looking pristine year-round with scheduled maintenance plans tailored to your needs.</p>
+                    <ul class="service-features">
+                        <li>Quarterly visits</li>
+                        <li>Priority scheduling</li>
+                        <li>Discounted rates</li>
+                        <li>Customizable plans</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Proof Section -->
+    <section class="visual-proof" id="testimonials">
+        <div class="section-header">
+            <h2>Trusted by Your Neighbors</h2>
+            <p>Don't just take our word for it—hear from property owners who've experienced the difference.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">"The peace of mind A. Sardina gives us is unmatched."</p>
+                <p class="testimonial-author">M. Thompson</p>
+                <p class="testimonial-location">Park Shore</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">"Alex is a master of his craft."</p>
+                <p class="testimonial-author">C. Wallace</p>
+                <p class="testimonial-location">Pelican Bay</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">"John Sardina is the kind of person you want on your property."</p>
+                <p class="testimonial-author">L. Daniels</p>
+                <p class="testimonial-location">Moorings</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section class="service-area" id="areas">
+        <div class="section-header">
+            <h2>Service Area</h2>
+            <p>Proudly serving Southwest Florida's finest communities.</p>
+        </div>
+        <div class="areas-list">
+            <span class="area-tag">Naples</span>
+            <span class="area-tag">Pelican Bay</span>
+            <span class="area-tag">Park Shore</span>
+            <span class="area-tag">Moorings</span>
+            <span class="area-tag">Pine Ridge</span>
+            <span class="area-tag">Bonita</span>
+            <span class="area-tag">Marco Island</span>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <h2>Ready for a Higher Standard?</h2>
+            <a href="/contact/" class="cta-button-large">Get a Free Estimate</a>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <script src="js/footer.js"></script>
 </body>
 </html>
