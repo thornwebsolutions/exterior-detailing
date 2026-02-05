@@ -9,10 +9,12 @@
             </div>
             <div class="footer-section">
                 <h4>Services</h4>
-                <a href="/residential/#services" class="service-link">Roof Washing</a>
+                <a href="/residential/#services" class="service-link">Roof Cleaning</a>
+                <a href="/residential/#services" class="service-link">Roof Protection</a>
+                <a href="/residential/#services" class="service-link">Exterior Soft Wash</a>
                 <a href="/residential/#services" class="service-link">Paver Cleaning</a>
-                <a href="/residential/#services" class="service-link">Home Soft Wash</a>
-                <a href="/residential/#services" class="service-link">Pool Decks</a>
+                <a href="/residential/#services" class="service-link">Paver Sealing & Restoration</a>
+
             </div>
             <div class="footer-section">
                 <h4>Company</h4>
@@ -23,9 +25,8 @@
             </div>
             <div class="footer-section">
                 <h4>Contact</h4>
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: alex@exteriordetailing.com</p>
-                <p>Hours: Mon-Sat 7AM-7PM</p>
+                <p>Phone: <a href="tel:+12392535416">(239) 253-5416</a></p>
+                <p>Email: <a href="mailto:exteriordetailing@icloud.com">exteriordetailing@icloud.com</a></p>
             </div>
         </div>
         <div class="footer-bottom">
